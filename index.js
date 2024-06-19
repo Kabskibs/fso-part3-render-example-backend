@@ -4,6 +4,7 @@ const cors = require('cors')
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static('dist'))
 
 const requestLogger = (request, response, next) => {
   console.log('Method:', request.method)
@@ -28,6 +29,11 @@ let notes = [
   {
     id: 3,
     content: "GET and POST are the most important methods of HTTP protocol",
+    important: true
+  },
+  {
+    id: 4,
+    content: "testink",
     important: true
   }
 ]
